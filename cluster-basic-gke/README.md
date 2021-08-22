@@ -34,13 +34,13 @@
 - Clone the repository: 
 
 ```
-#> git clone https://github.com/neuvector/terraform
-#> cd cluster-basic-gke/
+git clone https://github.com/neuvector/terraform
+cd cluster-basic-gke/
 ```
 - rename the file tfvars and update your values:
 ```
-#> mv terraform.tfvars.tpl terraform.tfvars
-#> vim terraform.tfvars
+mv terraform.tfvars.tpl terraform.tfvars
+vim terraform.tfvars
 ```
 
 - save changes and deploy the cluster with terraform:  
@@ -63,11 +63,11 @@ gcloud container clusters get-credentials [cluster-name] --zone [zone] --project
 - Edit the gke.tf file in the module-example folder with appropriate values:
 
 ```
-#> git clone https://github.com/neuvector/terraform
-#> cd cluster-basic-gke/module-example/
-#> vim gke.tf
-
--------------------------
+git clone https://github.com/neuvector/terraform
+cd cluster-basic-gke/module-example/
+vim gke.tf
+```
+```
 module "nv-gke-cluster" {
   source                = "git::https://github.com/neuvector/terraform//cluster-basic-gke?ref=feature/cases"
   
